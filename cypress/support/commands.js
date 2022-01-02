@@ -13,16 +13,14 @@ Cypress.Commands.add('acceptCookies', () => {
 })
 
 Cypress.Commands.add('closeSelectCountryModal', () => {
-    if (cy.get(selectors.SelectCountryModal)) {
-        cy.get(selectors.CloseModal).click();
-      }
+    cy.get(selectors.SelectCountryModal);
+    cy.get(selectors.CloseModal).click();
 })
 
 Cypress.Commands.add('closeSelectLanguageModal', () => {
-    if (cy.get(selectors.SelectLanguageModal)) {
-        cy.wait(2000);
+    cy.get(selectors.SelectLanguageModal);
+        cy.wait(1000);
         cy.get(selectors.CloseModal).click();
-      }
 })
 
 Cypress.Commands.add('openHeaderMenu', () => {

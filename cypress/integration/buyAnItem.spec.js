@@ -11,8 +11,8 @@ describe('BuyAnItem', () => {
     it('Checks buying an item as returning user (unlogged) with change delivery address', () => {
         cy.visitHomepage();
         cy.acceptCookies();
-        cy.closeSelectCountryModal();
-        cy.closeSelectLanguageModal();
+        cy.closeSelectCountryModal(); // user is visiting web from Czech Republic
+        cy.closeSelectLanguageModal(); // user is visiting web from Czech Republic
         cy.openHeaderMenu();
         cy.selectBeautyCategory();
         cy.selectMakeUpSubCategory();
